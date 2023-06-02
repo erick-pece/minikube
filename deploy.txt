@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hellow-kubernetes
+  name: hellow-kubernetes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellow-kubernetes
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hellow-kubernetes
+    spec:
+      containers:
+      - image: paulbouwer/hello-kubernetes
+        name: hello-kubernetes
+        resources: {}
+status: {}
